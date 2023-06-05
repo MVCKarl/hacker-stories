@@ -29,11 +29,20 @@ const App = () =>
       <List />
     </div>
 
-const Search = () => 
+const Search = () => {
+  // perform a task in between
+  
+  const handleSearchOnChange = (event) => {
+    console.log(event.target.value)
+  }
+
+  return (
     <div>
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text" />
+    <label htmlFor="search">Search: </label>
+    <input id="search" type="text" onChange={handleSearchOnChange}  />
     </div>
+  );
+  };
 
 const List = () => 
     <ul>
